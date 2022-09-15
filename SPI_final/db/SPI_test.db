@@ -1,0 +1,190 @@
+record(mbboDirect, "TEST:SEND"){
+	field(DTYP, "stream")
+	field(OUT, "@test.proto send() SPI")
+	field(SCAN, "Passive")
+	#field(FLNK, "READ:BACK")
+	#field(DRVH, "256")
+	#field(DRVL, "0")
+	#field(NOBT, "1" )
+}
+
+record(stringout, "TEST:BYTE1"){
+	field(DTYP, "Soft Channel" )
+	field(VAL, "0")
+}
+
+record(stringout, "TEST:BYTE2"){
+        field(DTYP, "Soft Channel" )
+        field(VAL, "0")
+}
+
+record(stringout, "TEST:BYTE3"){
+        field(DTYP, "Soft Channel" )
+        field(VAL, "0")
+}
+
+record(stringout, "TEST:BYTE4"){
+        field(DTYP, "Soft Channel" )
+        field(VAL, "0")
+}
+
+record(stringout, "TEST:BYTE5"){
+        field(DTYP, "Soft Channel" )
+        field(VAL, "0")
+	field(FLNK, "TEST:SEND" )
+}
+
+record(bo, "$(head):GPIO17:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@17 H") # or GPIO17, Active High
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+}
+
+record(bo, "$(head):GPIO27:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@27 H") # or GPIO27, Active High
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+}
+
+record(bo, "$(head):GPIO22:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@22 H") # or GPIO22, Active High
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(FLNK, "READ:BACK")
+}
+
+record(ai, "INPUT:FREQ"){
+field(VAL, "0")
+#field(DRVL, "0")
+#field(DRVH, "3000000")
+}
+
+record( mbbiDirect, "READ:BACK"){
+field(DTYP, "stream")
+#field(DISV, "1")
+field(INP, "@test.proto read() SPI")
+field(SCAN, "Passive")
+}
+
+record( mbbiDirect, "READ:BACK2"){
+field(DTYP, "stream")
+#field(DISV, "1")
+field(INP, "@test.proto read() SPI")
+field(SCAN, "Passive")
+}
+
+record( mbbiDirect, "READ:BACK3"){
+field(DTYP, "stream")
+#field(DISV, "1")
+field(INP, "@test.proto read() SPI")
+field(SCAN, "Passive")
+}
+
+record( mbbiDirect, "READ:BACK4"){
+field(DTYP, "stream")
+#field(DISV, "1")
+field(INP, "@test.proto read() SPI")
+field(SCAN, "Passive")
+}
+
+record(bo, "$(head):GPIO18:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@18 L") # or GPIO18, Active Low
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(FLNK, "READ:BACK")
+}
+
+record(bo, "$(head):GPIO23:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@23 L") # or GPIO23, Active Low
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(FLNK, "READ:BACK")
+}
+
+record(bo, "$(head):GPIO24:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@24 L") # or GPIO24, Active Low
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(FLNK, "READ:BACK")
+}
+
+record(bo, "$(head):GPIO25:OUT") {
+field(DTYP, "devgpio")
+field(OUT, "@25 L") # or GPIO25, Active Low
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(FLNK, "READ:BACK")
+}
+
+record(bi, "CS1") {
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(VAL, "OFF")
+}
+
+record(bi, "CS2") {
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(VAL, "OFF")
+}
+
+record(bi, "CS3") {
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(VAL, "OFF")
+}
+
+record(bi, "CS4") {
+field(ZNAM, "OFF")
+field(ONAM, "ON")
+#field(VAL, "OFF")
+}
+
+record(longin, "READ:SWITCH") {
+#field(ZNAM, "OFF")
+#field(ONAM, "ON")
+field(VAL, "0")
+field(FLNK, "READ:BACK")
+}
+
+record(longin, "READ:SWITCH2") {
+#field(ZNAM, "OFF")
+#field(ONAM, "ON")
+field(VAL, "0")
+field(FLNK, "READ:BACK2")
+}
+
+record(longin, "READ:SWITCH3") {
+#field(ZNAM, "OFF")
+#field(ONAM, "ON")
+field(VAL, "0")
+field(FLNK, "READ:BACK3")
+}
+
+record(longin, "READ:SWITCH4") {
+#field(ZNAM, "OFF")
+#field(ONAM, "ON")
+field(VAL, "0")
+field(FLNK, "READ:BACK4")
+}
+
+record(ai, "CHANNEL1:FREQ") {
+field(VAL, "0")
+}
+
+record(ai, "CHANNEL2:FREQ") {
+field(VAL, "0")
+}
+record(ai, "CHANNEL3:FREQ") {
+field(VAL, "0")
+}
+record(ai, "CHANNEL4:FREQ") {
+field(VAL, "0")
+}
+

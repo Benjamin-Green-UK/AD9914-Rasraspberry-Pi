@@ -1,0 +1,19 @@
+Terminator   = "";
+LockTimeout = 500;
+ReplyTimeout = 100;
+ReadTimeout  = 100;
+WriteTimeout = 100;
+MaxInput     = 4;
+ExtraInput   = Error;
+
+send {
+	out "%(TEST:BYTE1.VAL)r", "%(TEST:BYTE2.VAL)r", "%(TEST:BYTE3.VAL)r"
+	"%(TEST:BYTE4.VAL)r", "%(TEST:BYTE5.VAL)r";
+
+}
+
+
+read {
+	out 0x8B;
+	in "%04r";
+}
